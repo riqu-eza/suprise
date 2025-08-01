@@ -83,7 +83,7 @@ export default function YogurtSelection({ onSelect }) {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute -top-3 -right-4 text-rose-400"
+                  className="absolute -top-3 -right-5 text-rose-400"
                 >
                   <HeartIcon className="w-6 h-6" />
                 </motion.div>

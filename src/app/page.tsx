@@ -1,23 +1,21 @@
+/* eslint-disable react/jsx-key */
 "use client";
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import WelcomeScreen from '../components/WelcomeScreen';
 import YogurtSelection from '../components/YogurtSelection';
 import YogurtGlass from '../components/YogurtGlass';
-import { yogurtTypes, toppings } from '../utils/yogurtData';
 
 export default function Home() {
   const [step, setStep] = useState(0);
   const [selectedYogurt, setSelectedYogurt] = useState(null);
   const [selectedToppings, setSelectedToppings] = useState([]);
 
-  const handleYogurtSelect = (yogurt) => {
+  const handleYogurtSelect = (yogurt: SetStateAction<null>) => {
     setSelectedYogurt(yogurt);
     setStep(2);
   };
 
-  const handleToppingSelect = (topping) => {
-    setSelectedToppings([...selectedToppings, topping]);
-  };
+ 
 
   const steps = [
     <WelcomeScreen onStart={() => setStep(1)} />,
